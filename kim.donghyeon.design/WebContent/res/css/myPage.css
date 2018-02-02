@@ -1,0 +1,160 @@
+  
+    body {
+     	background:url(../img/citypic2.jpg) no-repeat; 
+     	background-size:100% 690px;  
+     	margin-bottom: 0px;
+    } 
+    
+   #logoText{
+   	text-align: center;
+   }
+   .container{/* 占쎌읈筌ｏ옙 �뚢뫂�믭옙�뵠占쎄섐 */
+      margin-bottom: 50px;
+      margin-top: 10px;
+   }
+   
+   #topLogin{
+   		border:1px solid #fff;
+   		border-radius:5px;
+   		padding: 5px;
+   	  	float:right;
+   	  	text-decoration: none;
+   	  	color:lightgray;
+    	margin-right:10px; 
+   }
+   
+   .dropdown:hover .dropdown-menu {/* 占쎈굡嚥∽옙占쎈뼄占쎌뒲 占쎄퉳 */
+       display: block;
+       margin-top: 0;
+       background-color: #000;
+       margin-left: 80px;
+   }
+   #logo{
+   	font-size: 60px; color: #000;text-decoration: none;
+   }
+   .nav>li{/* 筌롫뗀�뤀�뜮占�  */
+      width:250px;
+      height: 20px;
+      text-align:center;
+   }
+    .dropdown:hover{
+   		height:48px;
+   }
+   
+   #ul1{
+   		width: 190px;
+   }
+   #ul2{
+   		width: 250px;
+   }
+   #ul4{
+   		width: 180px;
+   }
+   .dropdown-menu>li{
+   	float: left;
+   }
+   .dropdown-menu>li>a{
+/*    		font-size: 20px;  */
+   		color: #9d9d9d;
+   		font-size:15px;
+   }
+   .dropdown-menu>li>a:hover{
+   		background-color:black;
+   		color: white;
+   }
+    .dropdown{ 
+    	margin-left:1px; 
+  
+   } 
+   
+   label{
+   	color:white;
+   }
+   #loginBtn{
+   	margin-bottom: 10px;
+   }
+   
+   #userBtn{
+   	margin-left: 10px;
+   	margin-right: 10px;
+   }
+   .btnl{
+    border:none;
+   	background-color:black;
+   	color:white;
+   }
+   .btnl:hover{
+    border:none;
+   	background-color: gray;
+   }
+   .btnl:active{
+    border: none;
+	background-color: gray;
+   }
+
+
+	#footer{
+		text-align: right;
+		margin-bottom:0px;
+		padding-bottom:10px;
+	}
+	#footerContent{
+		line-height:28px; 
+		padding:10px 0;
+		color: white;
+	}
+	b{
+		float: left;
+	}
+	#price{
+		float:right;
+	}
+	#detailBtn{
+		width:210px; 
+		margin-left: 5px;
+	}
+
+	.title{
+		margin-top:40px;
+	}
+	
+	hr{
+		margin-top:10px;
+		border: 1px solid black;
+		width:1140px;
+	}
+	
+
+	
+	#contentDiv{
+
+		margin-top:50px;
+		margin-left:130px;
+	}
+	
+	#infoTable{
+		width: 600px;
+	}
+	
+	#infoTable tr{
+		border-bottom:0.1px solid gray;
+		font-size:14px;
+		height: 45px;
+	}
+	
+	#infoTable tbody tr th{
+		width:200px;
+		font-size:17px;
+		font-family: 고딕;
+		
+		
+	}
+	
+	#infoTable tbody tr td{
+		font-size:14px;
+		font-family: 고딕;
+	}
+	
+	footer{
+		background-color: #000;
+	}

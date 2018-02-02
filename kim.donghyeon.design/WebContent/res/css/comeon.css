@@ -1,0 +1,73 @@
+@CHARSET "UTF-8";
+#comeon{
+   	
+   	color:gray;
+   	text-align: center;
+   	border-color: black;
+	border-style: solid;/*실선*/
+	padding: 10px;
+	border-top-width: 5px;/*선굵기 윗부분만*/
+	border-right-width: 0;
+	border-bottom-width:5px;
+	border-left-width: 0;
+	
+}
+ #subMenu{
+/*       margin-left:110px; */
+   }
+   #subMenu ul {
+      list-style-type:none;
+/*       border-left: 2px solid black; */
+      padding-left:0px;
+   }
+   
+   #subMenu ul li {
+      display:inline;
+      border-left: none;
+      padding: 0px 10px 0px 10px;
+      margin: 5px 0px 5px 0px;
+      border-left: 1px solid black;
+   }
+   
+   #subMenu ul li:first-child {
+
+      border-left: none;
+
+   }
+   
+   #subMenu ul li a{
+      text-decoration: none;
+   }
+   
+   #subMenu ul li a:hover{
+      color:black;
+   }
+   
+   #subMenu ul li a:active{
+      color:black;
+   }
+ .content {
+	float: left;
+	color: black;
+}
+aside {
+	float:  right;
+}
+#footer{
+		text-align: right;
+		margin-bottom:0px;
+		padding-bottom:10px;
+}
+#footerContent{
+		line-height:28px; 
+		padding:10px 0;
+		color: white;
+}
+footer{
+		background-color: #000;
+}
+.row{
+		width:400px;
+		float:right;
+		margin: 0 5px;
+	}

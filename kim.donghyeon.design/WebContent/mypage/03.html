@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>AwesomeCar Main</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<style>
+@import "../res/css/myPage.css";
+@import"../res/css/comeon.css";
+</style>
+</head>
+
+<body>
+<div class="container">
+	<a id="topLogin" href="../login/01.html">로그인</a>
+ 	<div id="logoText">
+          <a id="logo" href="../main.html">
+           AWESOME CAR♥
+           </a>
+    </div>
+   
+   
+ <nav class="navbar navbar-inverse">
+   <div class="container-fluid">
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+            <a href="../introduction/01.html">회사 소개</a>
+               <ul class="dropdown-menu" id="ul1">
+                  <li><a href="../introduction/01.html">오시는길</a></li>
+                  <li><a href="../introduction/02.html">인사말</a></li>
+               </ul>
+         </li>
+         <li class="dropdown">
+            <a href="../guide/01.html">대여 가이드</a>
+               <ul class="dropdown-menu" id="ul2">
+                  <li><a href="../guide/01.html">렌트안내</a></li>
+                  <li><a href="../guide/02.html">보험및유의사항</a></li>
+               </ul>
+         </li>
+         <li class="dropdown">
+            <a href="../reservation/01.html">실시간 예약</a>
+         </li>
+         <li class="dropdown">
+            <a href="../review/01.html">고객센터</a>
+               <ul class="dropdown-menu" id="ul4">
+                  <li><a href="../review/01.html">이용후기</a></li>
+                  <li><a href="../qna/01.html">Q&A</a></li>
+               </ul>
+         </li>
+      </ul>
+   </div>
+</nav>
+<div class="title">
+	<h3>마이페이지</h3>
+</div>
+<center><div id="comeon"><span class="glyphicon glyphicon-list-alt"></span><h3>회원탈퇴</h3></div></center>
+<div id="subMenu">
+<ul>
+	<li><a href="01.html">개인정보관리</a></li>
+	<li><a href="04.html">예약 관리</a></li>
+	<li><a href="03.html">회원 탈퇴</a></li>
+</ul>
+</div>
+
+<div id="contentDiv">
+		<table id="infoTable">
+			<tbody>
+			
+			<tr>
+			<th>이름</th>
+			<td>김동현</td>
+			</tr>
+	
+			<tr>
+			<th>아이디</th>
+			<td>kimdh1</td>
+			</tr>
+			
+			<tr>
+			<th>비밀번호</th>
+			<td>********</td>
+			</tr>
+			
+			<tr>
+			<th>E-MAIL</th>
+			<td>kimdh1@gmail.com&nbsp&nbsp</td>
+			</tr>
+			
+			<tr>
+			<th>핸드폰</th>
+			<td>010-1234-1234&nbsp&nbsp</td>
+			</tr>			
+			</tbody>			
+		</table>
+		<senter>
+		<div style="margin-top: 5px;">
+        <a data-toggle="modal" href="#myModal" class="btn btn-primary">회원탈퇴</a>
+        <div class="row 2nd">
+ 
+        </div>
+      </div>
+      </senter>
+        <!-- first modal -->
+    <div class="modal" id="myModal" aria-hidden="true" style="display: none; z-index: 1050;">
+    	<div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+              <h4 class="modal-title">AWESOME CAR♥</h4>
+            </div><div class="container"></div>
+            <div class="modal-body">
+                <div id="checkbox">
+				<br>
+				<input type='checkbox' />서비스가 엉망이여서
+				<br>
+				<input type='checkbox' />차를 사서
+				<br>
+				<input type='checkbox' />다른렌터카 이용할꺼라서
+				<br>
+				기타<input type='text' />
+             </div>
+             <br>
+             <br>
+             <br>
+              <a data-toggle="modal" href="#myModal2" class="btn btn-primary">탈퇴</a>
+            </div>
+            <div class="modal-footer">
+              <a href="#" data-dismiss="modal" class="btn">Close</a>
+              
+            </div>
+          </div>
+        </div>
+    </div>
+        <div class="modal" id="myModal2" aria-hidden="true" style="display: none; z-index: 1060;">
+    	<div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+              <h4 class="modal-title">AWESOME CAR♥</h4>
+            </div><div class="container"></div>
+            <div class="modal-body">
+              	탈퇴처리되었습니다. 
+              	그동안 이용해 주셔서 감사합니다.
+              
+              <a data-toggle="modal" href="../main.html" class="btn btn-primary">확인</a>
+            </div>
+            <div class="modal-footer">
+              <a href="#" data-dismiss="modal" class="btn">Close</a>
+             
+            </div>
+          </div>
+ </div>
+
+</div>
+</div>
+</div><!-- 컨테이너끝  -->
+</body>
+
+<footer>
+<div id="footer" class="container">	
+   <div id="footerContent">
+	   Copyright ⓒ awesomerentcar.com All rights reserved.<br>
+	   서울특별시 구로구  구로동 182-13<br>
+	   전화번호 : 010-4703-6105 | 사업자등록번호 : 111-22-33333 │ 개인정보관리책임: 김동현
+   </div>
+</div>
+</footer>
+</html>
