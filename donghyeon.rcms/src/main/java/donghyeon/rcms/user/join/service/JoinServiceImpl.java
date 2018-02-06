@@ -40,7 +40,6 @@ public class JoinServiceImpl implements JoinService{
 					user.setUserName(uForm.getUserName());
 					user.setUserHp(userHp);
 					user.setUserEmail(uForm.getUserEmail());
-					System.out.println(user);
 					joinDao.addUser(user);
 					return "success";
 				}else{

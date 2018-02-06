@@ -6,12 +6,12 @@ public class User {
 	private String userPw;
 	private String userEmail;
 	private String userHp;
-	private Class classCode;
+	private int classCode;
 	
 	public User(){}
 	
 	public User(String userId, String userName, String userPw,
-			String userEmail, String userHp, Class classCode) {
+			String userEmail, String userHp, int classCode) {
 		super();
 		this.userId = userId;
 		this.userName = userName;
@@ -51,10 +51,10 @@ public class User {
 	public void setUserHp(String userHp) {
 		this.userHp = userHp;
 	}
-	public Class getClassCode() {
+	public int getClassCode() {
 		return classCode;
 	}
-	public void setClassCode(Class classCode) {
+	public void setClassCode(int classCode) {
 		this.classCode = classCode;
 	}
 

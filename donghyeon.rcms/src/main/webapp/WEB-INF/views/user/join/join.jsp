@@ -12,6 +12,43 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script>
 $(function(){
+	//아이디 유효성 검사
+	var regexId = /^[a-z0-9_-]{4,16}$/;
+	var regexPw = /^.*(?=.{8,16})(?=.*[0-9])(?=.*[a-zA-Z]).*$/;
+	var regexHp = /^[0-9]{4}$/;
+	//중복체크 확인
+	var isId = false;
+	
+	//중복확인버튼클릭시
+	$("#doublecheck2").bind("click",function(){
+		$("#myModal").modal('show');
+		$("#userId").val($("#userI").val());
+		$.ajax({
+			method:"POST",
+			url: "doubleCheck",
+			data : $("#userId").serialize(),
+			success: function(msg){
+				if(msg){
+					if( !regexId.test($.trim($("#userId").val())) ){
+						$("#msg").text("사용 불가능한 아이디입니다.");
+					}else{
+						$("#msg").text("사용 가능한 아이디 입니다.");
+						$("#msg").append('<button type="button" id="use" class="btn btn-info" >사용하기</button>');
+						$(":button#use").bind("click",function(){
+							$("#userI").val($("#userId").val());
+							$("#userI").attr("readonly",'');
+							$("#myModal").modal('hide');
+							isId=true;
+						});
+					}
+				}else{
+					$("#msg").text("이미 사용중인 아이디 입니다.");
+				}
+			}
+		});
+	});
+	
+	//모달창 중복확인버튼클릭
 	$(":button#doubleCheck").bind("click",function(){
 		$.ajax({
 			method:"POST",
@@ -19,20 +56,45 @@ $(function(){
 			data : $("#userId").serialize(),
 			success: function(msg){
 				if(msg){
-					$("#msg").text("사용 가능한 아이디 입니다.");
-					$("#msg").append('<button type="button" id="use" class="btn btn-info" >사용하기</button>');
-					$(":button#use").bind("click",function(){
-						$("#userI").val($("#userId").val());
-						$("#userI").attr("readonly",'');
-						$("#myModal").modal('hide');
-					});
+					if( !regexId.test($.trim($("#userId").val())) ){
+						$("#msg").text("사용 불가능한 아이디입니다.");
+					}else{
+						$("#msg").text("사용 가능한 아이디 입니다.");
+						$("#msg").append('<button type="button" id="use" class="btn btn-info" >사용하기</button>');
+						$(":button#use").bind("click",function(){
+							$("#userI").val($("#userId").val());
+							$("#userI").attr("readonly",'');
+							$("#myModal").modal('hide');
+							isId=true;
+						});
+					}
 				}else{
 					$("#msg").text("이미 사용중인 아이디 입니다.");
 				}
 			}
 		});
 	});
+	
+	//회원가입버튼클릭시 조건검사
+	$("#join").bind("click",function(){
+			$('font[name=errMsg]').text("");
+		if(!isId){
+			$('font[name=errMsg]').text("아이디 중복확인 버튼을 눌러주세요.");
+		}else if( !regexPw.test($.trim($("#userPw").val())) ){
+			$('font[name=errMsg]').text("비밀번호를 숫자, 문자 포함 8자 이상 16자 이하 설정해주세요.");
+		}else if( $.trim($("#userPw").val()) != $.trim($("#userPwCheck").val()) ){
+			$('font[name=errMsg]').text("비밀번호가 동일하지 않습니다.");
+		}else if( $.trim($("#userName").val())=="" || $.trim($("#userHp2").val())=="" ||
+				  $.trim($("#userHp3").val())=="" || $.trim($("#userEmail").val())==""){
+			$('font[name=errMsg]').text("입력란을 모두입력해주세요.");
+		}else if( !regexHp.test($.trim($("#userHp2").val())) || !regexHp.test($.trim($("#userHp3").val())) ){
+			$('font[name=errMsg]').text("핸드폰 번호형식이 맞지않습니다.");
+		}else{
+			$("#joinHide").trigger("click");
+		}
+	});
 });
+
 </script>
 <style>
  #logo{
@@ -58,14 +120,14 @@ $(function(){
 		    <input type="type" class="form-control" id="userI" name="userI" placeholder="아이디"/>
 		    </div>
 		    <div class="col-sm-1">
-		    	<button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-default" >중복확인</button>
+		    	<button type="button" id="doublecheck2" class="btn btn-default" >중복확인</button>
 		    </div>
 	    </div>
 	    
 	    <div class="form-group">
 		    <label for="inputPassword" class="col-sm-2 control-label">비밀번호</label>
 		    <div class="col-sm-6">
-		    <input type="password" class="form-control" name="userPw" placeholder="비밀번호">
+		    <input type="password" class="form-control" id="userPw" name="userPw" placeholder="비밀번호">
 		    <p class="help-block">숫자, 문자 포함 8자 이상</p>
 		    </div>
 	    </div>
@@ -73,7 +135,7 @@ $(function(){
        <div class="form-group">
 		    <label for="inputPasswordCheck" class="col-sm-2 control-label">비밀번호 확인</label>
 		    <div class="col-sm-6">
-		    <input type="password" class="form-control" id="inputPasswordCheck" name="userPwCheck" placeholder="비밀번호 확인">
+		    <input type="password" class="form-control" id="userPwCheck" name="userPwCheck" placeholder="비밀번호 확인">
 		      <p class="help-block">비밀번호를 한번 더 입력해주세요.</p>
 		    </div>
 	   </div>
@@ -96,25 +158,26 @@ $(function(){
     </select>
     </div>
     <div class="col-sm-2">
-    	<input type="text" class="form-control" name="userHp2">
+    	<input type="text" class="form-control" id="userHp2" maxlength="4" name="userHp2">
     </div>
     <div class="col-sm-2">
-    	<input type="text" class="form-control" name="userHp3">
+    	<input type="text" class="form-control" id="userHp3" maxlength="4" name="userHp3">
     </div>
     </div>
     
     <div class="form-group">
 	    <label for="inputNumberCheck" class="col-sm-2 control-label">이메일</label>
 	    <div class="col-sm-6">
-	    <input type="email" class="form-control" id="inputNumberCheck" name="userEmail" placeholder="이메일">
+	    <input type="email" class="form-control" id="userEmail" name="userEmail" placeholder="이메일">
 	    </div>
     </div>
     
     <div class="form-group">
-    <h4 style="color:red;">${requestScope.error }</h4>
-      <center><button type="submit" class="btn btn-primary" formaction="signupCheck">회원가입</button></center>
+     <font name="errMsg" size="3" color="red"></font>
+      <center><button type="button" class="btn btn-primary" id="join" formaction="signupCheck">회원가입</button></center>
+     <font size="3" color="red">${errMsg2 }</font>
     </div>
-    
+    <input type="submit" id="joinHide" formaction="signupCheck" style="display: none;"/>
     </form>
   </article>
 </div>

@@ -34,22 +34,11 @@ public class JoinController {
 	
 	@RequestMapping("/signupCheck")
 	public String signupCheck(HttpServletRequest request,UserForm uForm){
-		System.out.println(uForm.getUserI());
-		switch(joinService.signupCheck(uForm)){
-			case "success": return "user/join/joinSuccess";
-			case "empty":{
-				request.setAttribute("error", "입련란을 모두 입력해주세요.");
-				return "forward:/signupForm";
-			}
-			case "pw": {
-				request.setAttribute("error", "비밀번호가 일치하지않습니다.");
-				return "forward:/signupForm";
-			}
-			case "pw8":{
-				request.setAttribute("error", "비밀번호를 8자리 이상 설정하여주십시오.");
-				return "forward:/signupForm";
-			}
-			default: return "/error";
+		if(joinService.signupCheck(uForm).equals("success")){
+			return "user/join/joinSuccess";
+		}else{
+			request.setAttribute("errMsg2", "회원가입에 실패했습니다.");
+			return "user/join/join";
 		}
 	}
 }

@@ -72,7 +72,7 @@
   </div><br><br>
 </form>
 <%
-	}else{ 
+	}else if(user.getClassCode()==1){ 
 %>
 <form class="form-horizontal">
   <div style="text-align: center; margin-bottom: 30px; margin-top: 20px;">
@@ -83,6 +83,21 @@
   </div>
   <div class="col-sm-12">
       <a id="loginBtn" class="col-sm-12 btn btn-lg btnl">마이 페이지</a>
+      <a id="loginBtn" class="col-sm-8 btn btnl" style="margin-left: 40px;" href="logOut">로그아웃</a>
+    </div>
+</form>
+<%
+	}else{ 
+%>
+<form class="form-horizontal">
+  <div style="text-align: center; margin-bottom: 30px; margin-top: 20px;">
+  	<h4 style="color:white;">
+  		<span class="glyphicon glyphicon-wrench"></span> <%=user.getUserName() %> 님<br>
+  		 반갑습니다
+  	</h4>
+  </div>
+  <div class="col-sm-12">
+      <a id="loginBtn" class="col-sm-12 btn btn-lg btnl">관리자 페이지</a>
       <a id="loginBtn" class="col-sm-8 btn btnl" style="margin-left: 40px;" href="logOut">로그아웃</a>
     </div>
 </form>

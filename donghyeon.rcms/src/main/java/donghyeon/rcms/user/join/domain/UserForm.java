@@ -58,4 +58,11 @@ public class UserForm {
 	public void setUserEmail(String userEmail) {
 		this.userEmail = userEmail;
 	}
+	@Override
+	public String toString() {
+		return "UserForm [userI=" + userI + ", userPw=" + userPw
+				+ ", userPwCheck=" + userPwCheck + ", userName=" + userName
+				+ ", userHp1=" + userHp1 + ", userHp2=" + userHp2
+				+ ", userHp3=" + userHp3 + ", userEmail=" + userEmail + "]";
+	}
 }

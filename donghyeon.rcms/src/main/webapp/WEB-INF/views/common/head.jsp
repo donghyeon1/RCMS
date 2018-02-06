@@ -20,31 +20,31 @@
     </div>
    
    
- <nav class="navbar navbar-inverse">
+  <nav class="navbar navbar-inverse">
    <div class="container-fluid">
       <ul class="nav navbar-nav">
          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="comeon.html">회사 소개</a>
+            <a href="tocome">회사 소개</a>
                <ul class="dropdown-menu" id="ul1">
-                  <li><a href="comeon.html">오시는길</a></li>
-                  <li><a href="#">인사말</a></li>
+                  <li><a href="tocome">오시는길</a></li>
+                  <li><a href="greet">인사말</a></li>
                </ul>
          </li>
          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">대여 가이드</a>
+            <a href="rentGuide">대여 가이드</a>
                <ul class="dropdown-menu" id="ul2">
-                  <li><a href="#">렌트안내</a></li>
-                  <li><a href="#">보험및유의사항</a></li>
+                  <li><a href="rentGuide">렌트안내</a></li>
+                  <li><a href="insuranceGuide">보험및유의사항</a></li>
                </ul>
          </li>
          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">실시간 예약</a>
+            <a href="reservation/01.html">실시간 예약</a>
          </li>
          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">고객센터</a>
+            <a href="review/01.html">고객센터</a>
                <ul class="dropdown-menu" id="ul4">
-                  <li><a href="#">이용후기</a></li>
-                  <li><a href="#">Q&A</a></li>
+                  <li><a href="review/01.html">이용후기</a></li>
+                  <li><a href="qna/01.html">Q&A</a></li>
                </ul>
          </li>
       </ul>
