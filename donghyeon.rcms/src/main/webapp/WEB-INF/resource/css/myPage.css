@@ -1,14 +1,12 @@
   
     body {
-     	background:url(../img/citypic2.jpg) no-repeat; 
-     	background-size:100% 690px;  
-     	margin-bottom: 0px;
-     	background-clip:border-box;
-     	overflow:hidden;
+        background:url(../img/citypic2.jpg) no-repeat; 
+        background-size:100% 690px;  
+        margin-bottom: 0px;
     } 
     
    #logoText{
-   	text-align: center;
+      text-align: center;
    }
    .container{/* 占쎌읈筌ｏ옙 �뚢뫂�믭옙�뵠占쎄섐 */
       margin-bottom: 50px;
@@ -16,13 +14,13 @@
    }
    
    #topLogin{
-   		border:1px solid #fff;
-   		border-radius:5px;
-   		padding: 5px;
-   	  	float:right;
-   	  	text-decoration: none;
-   	  	color:lightgray;
-    	margin-right:10px; 
+         border:1px solid #fff;
+         border-radius:5px;
+         padding: 5px;
+           float:right;
+           text-decoration: none;
+           color:lightgray;
+       margin-right:10px; 
    }
    
    .dropdown:hover .dropdown-menu {/* 占쎈굡嚥∽옙占쎈뼄占쎌뒲 占쎄퉳 */
@@ -32,7 +30,7 @@
        margin-left: 80px;
    }
    #logo{
-   	font-size: 60px; color: #000;text-decoration: none;
+      font-size: 60px; color: #000;text-decoration: none;
    }
    .nav>li{/* 筌롫뗀�뤀�뜮占�  */
       width:250px;
@@ -40,163 +38,163 @@
       text-align:center;
    }
     .dropdown:hover{
-   		height:48px;
+         height:48px;
    }
    
    #ul1{
-   		width: 190px;
+         width: 190px;
    }
    #ul2{
-   		width: 250px;
+         width: 250px;
    }
    #ul4{
-   		width: 180px;
+         width: 180px;
    }
    .dropdown-menu>li{
-   	float: left;
+      float: left;
    }
    .dropdown-menu>li>a{
-/*    		font-size: 20px;  */
-   		color: #9d9d9d;
-   		font-size:15px;
+/*          font-size: 20px;  */
+         color: #9d9d9d;
+         font-size:15px;
    }
    .dropdown-menu>li>a:hover{
-   		background-color:black;
-   		color: white;
+         background-color:black;
+         color: white;
    }
     .dropdown{ 
-    	margin-left:1px; 
+       margin-left:1px; 
   
    } 
    
    label{
-   	color:white;
+      color:white;
    }
    #loginBtn{
-   	margin-bottom: 10px;
+      margin-bottom: 10px;
    }
    
    #userBtn{
-   	margin-left: 10px;
-   	margin-right: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
    }
    .btnl{
     border:none;
-   	background-color:black;
-   	color:white;
+      background-color:black;
+      color:white;
    }
    .btnl:hover{
     border:none;
-   	background-color: gray;
+      background-color: gray;
    }
    .btnl:active{
     border: none;
-	background-color: gray;
+   background-color: gray;
    }
    .carousel-inner>.item>a>img, .carousel-inner>.item>img{/* 筌�癒��쑎占쏙옙 筌△뫁�뵠沃섎챷占�  */
-		height:500px;
-		width: 100%;
-	}
+      height:500px;
+      width: 100%;
+   }
 
-	#footer{
-		text-align: right;
-		margin-bottom:0px;
-		padding-bottom:10px;
-	}
-	#footerContent{
-		line-height:28px; 
-		padding:10px 0;
-		color: white;
-	}
-	b{
-		float: left;
-	}
-	#price{
-		float:right;
-	}
-	#detailBtn{
-		width:210px; 
-		margin-left: 5px;
-	}
+   #footer{
+      text-align: right;
+      margin-bottom:0px;
+      padding-bottom:10px;
+   }
+   #footerContent{
+      line-height:28px; 
+      padding:10px 0;
+      color: white;
+   }
+   b{
+      float: left;
+   }
+   #price{
+      float:right;
+   }
+   #detailBtn{
+      width:210px; 
+      margin-left: 5px;
+   }
 
-	.title{
-		margin-top:40px;
-	}
-	
-	hr{
-		margin-top:10px;
-		border: 1px solid black;
-		width:1140px;
-	}
-	
-	#subMenu{
-/* 		margin-left:110px; */
-	}
-	#subMenu ul {
-		list-style-type:none;
-/* 		border-left: 2px solid black; */
-		padding-left:0px;
-	}
-	
-	#subMenu ul li {
-		display:inline;
-		border-left: none;
-		padding: 0px 10px 0px 10px;
-		margin: 5px 0px 5px 0px;
-		border-left: 1px solid black;
-	}
-	
-	#subMenu ul li:first-child {
+   .title{
+      margin-top:40px;
+   }
+   
+   hr{
+      margin-top:10px;
+      border: 1px solid black;
+      width:1140px;
+   }
+   
+   #subMenu{
+/*       margin-left:110px; */
+   }
+   #subMenu ul {
+      list-style-type:none;
+/*       border-left: 2px solid black; */
+      padding-left:0px;
+   }
+   
+   #subMenu ul li {
+      display:inline;
+      border-left: none;
+      padding: 0px 10px 0px 10px;
+      margin: 5px 0px 5px 0px;
+      border-left: 1px solid black;
+   }
+   
+   #subMenu ul li:first-child {
 
-		border-left: none;
+      border-left: none;
 
-	}
-	
-	#subMenu ul li a{
-		text-decoration: none;
-	}
-	
-	#subMenu ul li a:hover{
-		color:black;
-	}
-	
-	#subMenu ul li a:active{
-		color:black;
-	}
-	
-	#subMenuTitle{
-		margin-left:400px;
-	}
-	
-	#contentDiv{
+   }
+   
+   #subMenu ul li a{
+      text-decoration: none;
+   }
+   
+   #subMenu ul li a:hover{
+      color:black;
+   }
+   
+   #subMenu ul li a:active{
+      color:black;
+   }
+   
+   #subMenuTitle{
+      margin-left:400px;
+   }
+   
+   #contentDiv{
 
-		margin-top:50px;
-		margin-left:130px;
-	}
-	
-	#infoTable{
-		width: 600px;
-	}
-	
-	#infoTable tr{
-		border-bottom:0.1px solid gray;
-		font-size:14px;
-		height: 45px;
-	}
-	
-	#infoTable tbody tr th{
-		width:200px;
-		font-size:17px;
-		font-family: 고딕;
-		
-		
-	}
-	
-	#infoTable tbody tr td{
-		font-size:14px;
-		font-family: 고딕;
-	}
-	#mask {
+      margin-top:50px;
+      margin-left:300px;
+   }
+   
+   #infoTable{
+      width: 600px;
+   }
+   
+   #infoTable tr{
+      border-bottom:0.1px solid gray;
+      font-size:14px;
+      height: 45px;
+   }
+   
+   #infoTable tbody tr th{
+      width:200px;
+      font-size:17px;
+      font-family: 고딕;
+      
+      
+   }
+   
+   #infoTable tbody tr td{
+      font-size:14px;
+      font-family: 고딕;
+   }
+   #mask {
     display: none;
     background: #000;
     position: fixed;
@@ -226,7 +224,7 @@
 
 img.btn_close {
     Position the close button
-	float: right;
+   float: right;
     margin: -28px -28px 0 0;
 }
 
@@ -235,7 +233,7 @@ fieldset {
 }
 
 form.signin .textbox label {
-	margin-top:5px;
+   margin-top:5px;
     display: block;
     padding-bottom: 7px;
 }
@@ -290,13 +288,16 @@ form.signin input::-webkit-input-placeholder {
     width: 214px;
 }
 
+#msg{
+	font-size:13px;
+}
+
+.form-control{
+	width:80px;
+	float:left;
+	border:1px solid #ccc;
+}
+
 .button:hover {
     background: #ddd;
 }
-	
-	footer{
-		background-color: #000;
-		position:absolute;
-		bottom:0;
-		width:100%;
-	}

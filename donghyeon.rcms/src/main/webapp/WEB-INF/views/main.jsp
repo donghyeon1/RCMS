@@ -36,7 +36,7 @@
          </div>
          
          <div class="item">
-            <img src="<c:url value="/img/gg.jpg"/>">
+            <img src="<c:url value="/img/E300.gif"/>">
          </div>
       </div>
    
@@ -82,7 +82,7 @@
   	</h4>
   </div>
   <div class="col-sm-12">
-      <a id="loginBtn" class="col-sm-12 btn btn-lg btnl">마이 페이지</a>
+      <a href="myPage" id="loginBtn" class="col-sm-12 btn btn-lg btnl">마이 페이지</a>
       <a id="loginBtn" class="col-sm-8 btn btnl" style="margin-left: 40px;" href="logOut">로그아웃</a>
     </div>
 </form>

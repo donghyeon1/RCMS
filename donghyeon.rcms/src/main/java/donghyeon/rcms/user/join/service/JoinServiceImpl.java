@@ -33,7 +33,7 @@ public class JoinServiceImpl implements JoinService{
 			if(uForm.getUserPw().equals(uForm.getUserPwCheck())){
 				//비번이 8자리 이상이면 
 				if(uForm.getUserPw().length()>=8){
-					String userHp=uForm.getUserHp1()+uForm.getUserHp2()+uForm.getUserHp3();
+					String userHp=uForm.getUserHp1()+"-"+uForm.getUserHp2()+"-"+uForm.getUserHp3();
 					User user=new User();
 					user.setUserId(uForm.getUserI());
 					user.setUserPw(uForm.getUserPw());

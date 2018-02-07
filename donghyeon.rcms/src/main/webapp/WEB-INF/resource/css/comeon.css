@@ -46,26 +46,32 @@
    #subMenu ul li a:active{
       color:black;
    }
+   
  .content {
 	float: left;
 	color: black;
 }
+
 aside {
 	float:  right;
 }
+
 #footer{
 		text-align: right;
 		margin-bottom:0px;
 		padding-bottom:10px;
 }
+
 #footerContent{
 		line-height:28px; 
 		padding:10px 0;
 		color: white;
 }
+
 footer{
 		background-color: #000;
 }
+
 .row{
 		width:400px;
 		float:right;
