@@ -18,9 +18,9 @@ public  class SendMail {
 	//메일 보내기 공통부분, 파라미터 받는사람, 제목, 내용
 	//성공하면 1 반환 오류시 2반환
    private static int sendEmail(String recipient,String subject,String body) {
-       String host = "smtp.naver.com";
-       final String username = "smtpsus3311@naver.com";
-       final String password = "1q2w3e!";
+       String host = "smtp.gmail.com";
+       final String username = "awesomecarmanager@gmail.com";
+       final String password = "djTjazk!";
        String port="465";
        try {
        Properties props = System.getProperties();
@@ -44,7 +44,7 @@ public  class SendMail {
        
        Message mimeMessage = new MimeMessage(session);
        
-       mimeMessage.setFrom(new InternetAddress("AwesomeCar"));
+       mimeMessage.setFrom(new InternetAddress("awesomecarmanager@gmail.com"));
        mimeMessage.setRecipient(Message.RecipientType.TO, new InternetAddress(recipient));
        mimeMessage.setSubject(subject);
        mimeMessage.setText(body);

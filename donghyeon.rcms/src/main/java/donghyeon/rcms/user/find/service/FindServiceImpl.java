@@ -15,9 +15,8 @@ public class FindServiceImpl implements FindService{
 	
 	//이름과 이메일이 같으면
 	public User idCheck(FindInfo fInfo){
-//		List<User> users=findDao.getUserInfos();
-		System.out.println(findDao.getUserInfos());
-		for(User user:findDao.getUserInfos()){
+		List<User> users=findDao.getUserInfos();
+		for(User user:users){
 			if (user.getUserName().equals(fInfo.getUserName()) && user.getUserEmail().equals(fInfo.getUserEmail()) ){
 				return user;
 			}
@@ -29,7 +28,7 @@ public class FindServiceImpl implements FindService{
 	public User pwCheck(FindInfo fInfo){
 		List<User> users=findDao.getUserInfos();
 		for(User user:users){
-			if (user.getUserId().equals(fInfo.getUserId()) && user.getUserEmail().equals(fInfo.getUserEmail()) ){
+			if (user.getUserId().equals(fInfo.getUserId()) && user.getUserEmail().equals(fInfo.getUserEmail2()) ){
 				return user;
 			}
 		}

@@ -4,11 +4,18 @@ public class FindInfo {
 	private String userId;
 	private String userName;
 	private String userEmail;
+	private String userEmail2;
+	
 	
 	@Override
 	public String toString() {
-		return "FindInfo [userId=" + userId + ", userName=" + userName
-				+ ", userEmail=" + userEmail + "]";
+		return String.format("%s %s %s %s", userId, userName, userEmail, userEmail2);
+	}
+	public String getUserEmail2() {
+		return userEmail2;
+	}
+	public void setUserEmail2(String userEmail2) {
+		this.userEmail2 = userEmail2;
 	}
 	public String getUserId() {
 		return userId;

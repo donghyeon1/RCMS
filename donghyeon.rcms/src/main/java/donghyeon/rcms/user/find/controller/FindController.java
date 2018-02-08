@@ -19,30 +19,35 @@ public class FindController {
 		return "user/find/find";
 	}
 	
-	//정보틀렸을때
 	@ResponseBody
-	@RequestMapping("/findId")
+	@RequestMapping(value="/findId",produces = "application/text; charset=utf8")
 	public String findId(FindInfo fInfo){
-		fInfo.setUserEmail("tirran@naver.com");
-		fInfo.setUserName("김동현");
 		User user = findService.idCheck(fInfo);
 		if(user!=null){
-			SendMail.sendInquiryAnswer(fInfo.getUserEmail(), "ID/PW 찾기 메일 입니다.", "회원님의 아이디는 "+user.getUserId()
-					+"입니다. ");
-			return "가입하신 이메일로 id를 발송해드렸습니다. 확인후 로그인 하여주십시오.";
+			if(1==SendMail.sendInquiryAnswer(user.getUserEmail(), "ID/PW 찾기 메일 입니다.", "회원님의 아이디는 "+user.getUserId()
+					+"입니다. ")){
+			return "true";
+			}else{
+				return "";
+			}
 		}
-		return "입력하신 정보로 가입한 회원을 찾을수 없습니다.";
+		return "";
 	}
 	
 	@ResponseBody
-	@RequestMapping("/findPw")
+	@RequestMapping(value="/findPw",produces = "application/text; charset=utf8")
 	public String findPw(FindInfo fInfo){
 		User user=findService.pwCheck(fInfo);
 		if(user!=null){
-			SendMail.sendInquiryAnswer(fInfo.getUserEmail(), "ID/PW 찾기 메일 입니다.", "회원님의 비밀번호는 "+user.getUserPw()
-					+"입니다. ");
-			return "가입하신 이메일로 비밀번호를 발송해드렸습니다. 확인후 로그인 하여주십시오.";
+			if(1==SendMail.sendInquiryAnswer(user.getUserEmail(), "ID/PW 찾기 메일 입니다.", "회원님의 비밀번호는 "+user.getUserPw()
+					+"입니다. ")){
+				System.out.println(SendMail.sendInquiryAnswer(user.getUserEmail(), "ID/PW 찾기 메일 입니다.", "회원님의 비밀번호는 "+user.getUserPw()
+						+"입니다. ")+"보냄");
+					return "true";
+			}else{
+				return "";
+			}
 		}
-		return "입력하신 정보로 가입한 회원을 찾을수 없습니다.";
+		return "";
 	}
 }

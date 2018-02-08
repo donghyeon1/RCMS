@@ -192,7 +192,7 @@ $(function(){
 					<div class="form-group">
 					    <label for="userId" class="col-sm-2 control-label">아이디</label>
 					    <div class="col-sm-6">
-					    <input type="type" class="form-control" id="userId" name="userId" placeholder="아이디"/>
+					    <input type="text" class="form-control" id="userId" name="userId" placeholder="아이디"/>
 					    </div>
 					    <div class="col-sm-1">
 					    	<button type="button" id="doubleCheck" class="btn btn-default" >중복확인</button>

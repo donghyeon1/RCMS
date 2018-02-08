@@ -13,7 +13,61 @@
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 <script>
 $(function(){
+	//정보입력후 아이디찾기버튼클릭
+	$("#findById").bind("click",function(){
+		$.ajax({
+			method:"POST",
+			url: "findId",
+			data : {
+				userName: $("#userName").val(),
+				userEmail: $("#userEmail").val()
+			},
+			success: function(msg){
+				console.log(msg);
+				if(msg){
+					$("#msg").text("가입하신 이메일로 비밀번호를 발송해드렸습니다. 확인후 로그인 하여주십시오.");
+					$("#result").attr("data-dismiss","");
+					$("#result").attr("href",".");
+				}else{
+					$("#msg").text("입력하신 정보로 가입한 회원을 찾을수 없습니다.");
+					$("#result").attr("data-dismiss","modal");
+					$("#result").attr("href","");
+				}
+			}
+		});
+	});
 	
+	//정보입력후 비밀번호찾기버튼클릭
+	$("#findByPw").bind("click",function(){
+		$.ajax({
+			method:"POST",
+			url: "findPw",
+			data : {
+				userId: $("#userId").val(),
+				userEmail2: $("#userEmail2").val()
+			},
+			success: function(msg){
+				console.log(msg);
+				if(msg){
+					$("#msg").text("가입하신 이메일로 비밀번호를 발송해드렸습니다. 확인후 로그인 하여주십시오.");
+					$("#result").attr("data-dismiss","");
+					$("#result").attr("href",".");
+				}else{
+					$("#msg").text("입력하신 정보로 가입한 회원을 찾을수 없습니다.");
+					$("#result").attr("data-dismiss","modal");
+					$("#result").attr("href","");
+				}
+			},
+			error: function(a, b, errMsg){
+				$("#msg").text("에러"+errMsg);
+			}
+		});
+	});
+	
+	//모달확인버튼클릭시 메세지초기화
+	$("#result").bind("click",function(){
+		$("#msg").text("");
+	});
 });
 </script>
 <style>
@@ -22,50 +76,13 @@ $(function(){
 </head>
 <body>
 <div class="container">
-	<a id="topLogin" href=".">로그아웃</a>
- 	<div id="logoText">
-          <a id="logo" href=".">
-           AWESOME CAR♥
-           </a>
-    </div>
-   
-   
- <nav class="navbar navbar-inverse">
-   <div class="container-fluid">
-      <ul class="nav navbar-nav">
-         <li class="dropdown">
-            <a href="../introduction/01.html">회사 소개</a>
-               <ul class="dropdown-menu" id="ul1">
-                  <li><a href="../introduction/01.html">오시는길</a></li>
-                  <li><a href="../introduction/02.html">인사말</a></li>
-               </ul>
-         </li>
-         <li class="dropdown">
-            <a href="../guide/01.html">대여 가이드</a>
-               <ul class="dropdown-menu" id="ul2">
-                  <li><a href="../guide/01.html">렌트안내</a></li>
-                  <li><a href="../guide/02.html">보험및유의사항</a></li>
-               </ul>
-         </li>
-         <li class="dropdown">
-            <a href="../reservation/01.html">실시간 예약</a>
-         </li>
-         <li class="dropdown">
-            <a href="../review/01.html">고객센터</a>
-               <ul class="dropdown-menu" id="ul4">
-                  <li><a href="../review/01.html">이용후기</a></li>
-                  <li><a href="../qna/01.html">Q&A</a></li>
-               </ul>
-         </li>
-      </ul>
-   </div>
-</nav>
+<%@ include file="../../common/head.jsp" %>
 
 <div id="findUser">
 	<div id="findId">
 		<span style="width:400px; margin-top: 30px;font-size: 20px; text-align: center;">아이디를 잊으셨나요?</span>
 		<div class="findBtn">
-			<p>가입 시 입력한 이름과 핸드폰번호를 이용하여 ID를 찾습니다.</p>
+			<p>가입 시 입력한 이름과 E-Mail을 이용하여 ID를 찾습니다.</p>
 			<a data-toggle="modal" href="#myModa" class="btn btn-default">아이디 찾기</a>
 		</div>
 	</div>
@@ -73,7 +90,7 @@ $(function(){
 	<div id="findPw">
 		<span style="width:400px; margin-top: 30px;font-size: 20px; text-align: center;">비밀번호를 잊으셨나요?</span>
 		<div class="findBtn">
-			<p>가입 시 입력한 이름과 핸드폰번호를 이용하여 ID를 찾습니다.</p>
+			<p>가입 시 입력한 아이디와 E-Mail을 이용하여 비밀번호를 찾습니다.</p>
 			<a data-toggle="modal" href="#myMod" class="btn btn-default">비밀번호 찾기</a>
 		</div>
 	</div>
@@ -88,17 +105,15 @@ $(function(){
                <h4 class="modal-title">아이디 찾기</h4>
             </div>
 	        <div class="modal-body" style="height: 300px;">
-		        <form>
   				<div class="form-group">
 		              이름:<br>
-		              <input type="text" placeholder="이름을 입력하세요" name="userName" id="userName" class="form-control"/>
+		              <input type="type" class="form-control" id="userName" name="userName" placeholder="이름을 입력하세요."/>
 		        </div>
 		        <div class="form-group">
-		              핸드폰 번호:<br>
-		              <input type="number" placeholder="-를 빼고 입력하세요" class="form-control"/>
+		              E-Mail 주소:<br>
+		              <input type="email" name="userEmail" id="userEmail" placeholder="이메일 주소를 입력하세요" class="form-control"/>
 		        </div>
-		        <a data-toggle="modal" href="#myMo" class="btn btn-default" style="margin-top: 20px;">아이디 찾기</a>
-		        </form>
+		        <a data-toggle="modal" href="#myMo" class="btn btn-default" id="findById" style="margin-top: 20px;">아이디 찾기</a>
 	        </div>
         </div>
      </div>
@@ -116,13 +131,13 @@ $(function(){
 		        <form>
   				<div class="form-group">
 		              아이디:<br>
-		              <input type="text" placeholder="아이디를 입력하세요" class="form-control"/>
+		              <input type="text" placeholder="아이디를 입력하세요" name="userId" id="userId" class="form-control"/>
 		        </div>
 		        <div class="form-group">
-		              핸드폰 번호:<br>
-		              <input type="number" placeholder="-를 빼고 입력하세요" class="form-control"/>
+		              E-Mail 주소:<br>
+		              <input type="email" name="userEmail2" id="userEmail2" placeholder="이메일 주소를 입력하세요" class="form-control"/>
 		        </div>
-		        <a data-toggle="modal" href="#myMo" class="btn btn-default" style="margin-top: 20px;">비밀번호 찾기</a>
+		        <a data-toggle="modal" href="#myMo" class="btn btn-default" id="findByPw" style="margin-top: 20px;">비밀번호 찾기</a>
 		        </form>
 	        </div>
         </div>
@@ -138,9 +153,8 @@ $(function(){
                <h4 class="modal-title"><span class="glyphicon glyphicon-envelope"></span> 확인</h4>
             </div>
 	        <div class="modal-body" style="height: 300px;">
-		        <p> 입력하신 정보로 아이디/비밀번호를 문자발송하였습니다.</p>
-		        <p> 확인후 로그인 하여주십시오.</p>
-		        <a href="01.html" class="btn btn-info">확인</a>
+		        <p id="msg"></p>
+		        <a data-dismiss="modal" class="btn btn-info" id="result">확인</a>
 	        </div>
         </div>
      </div>
