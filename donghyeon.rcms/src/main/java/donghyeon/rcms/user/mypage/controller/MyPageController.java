@@ -13,7 +13,7 @@ import donghyeon.rcms.user.mypage.service.MyPageService;
 
 @Controller
 public class MyPageController {
-	@Autowired MyPageService userModifyService;
+	@Autowired MyPageService myPageService;
 	
 	
 	@RequestMapping(value="myPage", method=RequestMethod.GET)
@@ -31,7 +31,7 @@ public class MyPageController {
 		String msg ="";
 		User user = (User)session.getAttribute("user");
 		user.setUserPw(userPw);
-		if(userModifyService.modifyPw(user)){
+		if(myPageService.modifyPw(user)){
 			msg = "success";
 			return msg;
 		}else{
@@ -46,7 +46,7 @@ public class MyPageController {
 		String msg ="";
 		User user = (User)session.getAttribute("user");
 		user.setUserEmail(userEmail);
-		if(userModifyService.modifyEmail(user)){
+		if(myPageService.modifyEmail(user)){
 			msg = "success";
 			return msg;
 		}else{
@@ -61,12 +61,38 @@ public class MyPageController {
 		String msg ="";
 		User user = (User)session.getAttribute("user");
 		user.setUserHp(userHp);
-		if(userModifyService.modifyHp(user)){
+		if(myPageService.modifyHp(user)){
 			msg = "success";
 			return msg;
 		}else{
 			msg = "err";
 			return msg;
+		}
+	}
+	
+	@RequestMapping(value="userSecedePage", method=RequestMethod.GET)
+	public String userSecedePage(HttpSession session){
+		User user = (User)session.getAttribute("user");
+		if(user==null){
+			return "redirect:login";
+		}
+		return "user/mypage/userSecede";
+	}
+	
+	@ResponseBody
+	@RequestMapping(value="userSecede")
+	public String userSecede(HttpSession session,String userPw){
+		User user = (User)session.getAttribute("user");
+		System.out.println(userPw+"입력");
+		System.out.println(user.getUserPw()+"세션");
+		
+		if(!userPw.equals(user.getUserPw())){
+			System.out.println("실패");
+			return "secedeFail";	
+		}else{
+			myPageService.secedeUser(user.getUserId());
+			System.out.println("성공");
+			return "secedeSuccess";
 		}
 	}
 }

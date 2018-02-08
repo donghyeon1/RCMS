@@ -8,21 +8,26 @@ import donghyeon.rcms.user.mypage.dao.mapper.MyPageMapper;
 
 @Repository
 public class MyPageDaoImpl implements MyPageDao {
-	@Autowired private MyPageMapper userModifyMapper;
+	@Autowired private MyPageMapper myPageMapper;
 
 	@Override
 	public boolean modifyPw(User user) {
-		return userModifyMapper.modifyPw(user)>=1;
+		return myPageMapper.modifyPw(user)>=1;
 	}
 	
 	@Override
 	public boolean modifyEmail(User user){
-		return userModifyMapper.modifyEmail(user)>=1;
+		return myPageMapper.modifyEmail(user)>=1;
 	}
 	
 	@Override
 	public boolean modifyHp(User user){
-		return userModifyMapper.modifyHp(user)>=1;
+		return myPageMapper.modifyHp(user)>=1;
+	}
+	
+	@Override
+	public boolean secedeUser(String userId){
+		return myPageMapper.secedeUser(userId)>=1;
 	}
 
 }
