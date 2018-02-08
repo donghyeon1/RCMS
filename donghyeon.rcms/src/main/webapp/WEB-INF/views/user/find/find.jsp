@@ -11,6 +11,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script>
+$(function(){
+	
+});
+</script>
 <style>
  @import url("<c:url value="/css/userFind.css"/>"); 
 </style>
@@ -86,7 +91,7 @@
 		        <form>
   				<div class="form-group">
 		              이름:<br>
-		              <input type="text" placeholder="이름을 입력하세요" class="form-control"/>
+		              <input type="text" placeholder="이름을 입력하세요" name="userName" id="userName" class="form-control"/>
 		        </div>
 		        <div class="form-group">
 		              핸드폰 번호:<br>
