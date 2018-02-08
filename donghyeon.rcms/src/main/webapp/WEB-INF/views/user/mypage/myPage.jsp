@@ -103,9 +103,9 @@ $(function(){
 <center><div id="comeon"><span class="glyphicon glyphicon-list-alt"></span><h3>개인정보관리</h3></div></center>
 <div id="subMenu">
 <ul>
-	<li><a href="01.html">개인정보관리</a></li>
+	<li><a href="myPage">개인정보관리</a></li>
 	<li><a href="04.html">예약 관리</a></li>
-	<li><a href="03.html">회원 탈퇴</a></li>
+	<li><a href="userSecedePage">회원 탈퇴</a></li>
 </ul>
 </div>
 

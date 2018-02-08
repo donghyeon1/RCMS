@@ -298,6 +298,10 @@ form.signin input::-webkit-input-placeholder {
 	border:1px solid #ccc;
 }
 
+#secedeDiv{
+	margin:10px 0 0 250px;
+}
+
 .button:hover {
     background: #ddd;
 }
