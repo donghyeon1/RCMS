@@ -11,8 +11,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <style>
-@import url("<c:url value="/css/comeon.css"/>");
-@import url("<c:url value="/css/myPage.css"/>");
+@import url("<c:url value="/css/rentGuide.css"/>");
 </style>
 </head>
 <body>
@@ -58,6 +57,7 @@
       </tr>
    </tbody>
 </table>
+<div style="margin-bottom:70px;"></div>
 </center>
 
 </div>

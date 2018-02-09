@@ -12,7 +12,7 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <style>
 @import url("<c:url value="/css/comeon.css"/>");
-@import url("<c:url value="/css/myPage.css"/>");
+@import url("<c:url value="/css/common2.css"/>");
 </style>
 </head>
 <body>

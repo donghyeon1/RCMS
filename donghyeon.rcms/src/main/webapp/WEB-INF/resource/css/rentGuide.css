@@ -5,8 +5,6 @@
         background:url(../img/citypic2.jpg) no-repeat; 
         background-size:100% 690px;  
         margin-bottom: 0px;
-        background-clip:border-box;
-        overflow:hidden;
     } 
     
    #logoText{
@@ -132,9 +130,7 @@
    
    footer{
       background-color: #000;
-      position:absolute;
-      bottom:0;
-      width:100%;
+      
    }
    
 #note{
