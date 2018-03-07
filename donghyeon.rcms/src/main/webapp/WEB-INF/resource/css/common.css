@@ -1,0 +1,171 @@
+  
+    body {
+     	background:url(../img/citypic.jpg) no-repeat; 
+     	background-size:100% 690px;  
+     	margin-bottom: 0px;
+    } 
+    #loggingDiv{
+    	background:url(../img/ErrorImg.jpg) no-repeat; 
+    	background-size:1138px 450px;
+    }
+   #logoText{
+   	text-align: center;
+   }
+   .container{/* 전체 컨테이너 */
+      margin-bottom: 50px;
+      margin-top: 10px;
+   }
+   
+   #topLogin{
+   		border:1px solid #fff;
+   		border-radius:5px;
+   		padding: 5px;
+   	  	float:right;
+   	  	text-decoration: none;
+   	  	color:lightgray;
+    	margin-right:10px; 
+   }
+   
+   .dropdown:hover .dropdown-menu {/* 드롭다운 색 */
+       display: block;
+       margin-top: 0;
+       background-color: #000;
+       margin-left: 80px;
+   }
+   #logo{
+   	font-size: 60px; color: #000;text-decoration: none;
+   }
+   .nav>li{/* 메뉴빠  */
+      width:250px;
+      height: 20px;
+      text-align:center;
+   }
+    .dropdown:hover{
+   		height:48px;
+   }
+   
+   #ul1{
+   		width: 190px;
+   }
+   #ul2{
+   		width: 250px;
+   }
+   #ul4{
+   		width: 180px;
+   }
+   .dropdown-menu>li{
+   	float: left;
+   }
+   .dropdown-menu>li>a{
+/*    		font-size: 20px;  */
+   		color: #9d9d9d;
+   		font-size:15px;
+   }
+   .dropdown-menu>li>a:hover{
+   		background-color:black;
+   		color: white;
+   }
+    .dropdown{ 
+    	margin-left:1px; 
+  
+   } 
+   #myCarousel{/* 케러셀 */
+      width: 75%;
+      height: 500px;
+      float: left;
+      
+   }
+   
+   .form-horizontal{/* 로그인창 */
+      padding:10px;
+      padding-top:30px;
+      padding-bottom:20px;
+      width:23.5%;
+      height: 250px;
+      float: left;
+      
+      border: 0.1px black solid;
+      margin-left: 1.5%;
+      margin-top: 15px;
+      margin-bottom: 30px;
+      border-radius:15px; 
+      background-color: rgba(255,255,255,0.05);
+   }
+   
+   label{
+   	color:white;
+   }
+   #loginBtn{
+   	margin-bottom: 10px;
+   }
+   
+   #reco{
+   	margin:0 460px;
+   }
+   #loginBannerImg{
+   	height:100px; 
+   	width:261px;
+   }
+   #userBtn{
+   	margin-left: 10px;
+   	margin-right: 10px;
+   }
+   .btnl{
+    border:none;
+   	background-color:black;
+   	color:white;
+   }
+   .btnl:hover{
+    border:none;
+   	background-color: gray;
+   }
+   .btnl:active{
+    border: none;
+	background-color: gray;
+   }
+   .carousel-inner>.item>a>img, .carousel-inner>.item>img{/* 캐러셀 차이미지  */
+		height:500px;
+		width: 100%;
+	}
+	#loginBanner{
+		margin: 4px 0px 1px 20px;
+		width:261px;
+		height: 100px;
+		float: left;
+	}
+	
+	.row{
+		width:250px;
+		float:left;
+		margin: 0 5px;
+	}
+	#recoImg{
+		width: 280px;
+	}
+	#recoContainer{
+		margin-left: 25px;
+	}
+	#footer{
+		text-align: right;
+		margin-bottom:0px;
+		padding-bottom:10px;
+	}
+	#footerContent{
+		line-height:28px; 
+		padding:10px 0;
+		color: white;
+	}
+	b{
+		float: left;
+	}
+	#price{
+		float:right;
+	}
+	#detailBtn{
+		width:210px; 
+		margin-left: 5px;
+	}
+	
+	footer{
+		background-color: #000;
+	}

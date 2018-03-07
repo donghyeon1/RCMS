@@ -1,0 +1,279 @@
+  
+    body {
+     	background:url(../img/citypic2.jpg) no-repeat; 
+     	background-size:100% 690px;  
+     	margin-bottom: 0px;
+    } 
+   #logoText{
+   	text-align: center;
+   }
+   .container{/* �쟾泥� 而⑦뀒�씠�꼫 */
+      margin-bottom: 50px;
+      margin-top: 10px;
+   }
+   
+   #topLogin{
+   		border:1px solid #fff;
+   		border-radius:5px;
+   		padding: 5px;
+   	  	float:right;
+   	  	text-decoration: none;
+   	  	color:lightgray;
+    	margin-right:10px; 
+   }
+   
+   .dropdown:hover .dropdown-menu {/* �뱶濡��떎�슫 �깋 */
+       display: block;
+       margin-top: 0;
+       background-color: #000;
+       margin-left: 80px;
+   }
+   #logo{
+   	font-size: 60px; color: #000;text-decoration: none;
+   }
+   .nav>li{/* 硫붾돱鍮�  */
+      width:250px;
+      height: 20px;
+      text-align:center;
+   }
+    .dropdown:hover{
+   		height:48px;
+   }
+   
+   #ul1{
+   		width: 190px;
+   }
+   #ul2{
+   		width: 250px;
+   }
+   #ul4{
+   		width: 180px;
+   }
+   .dropdown-menu>li{
+   	float: left;
+   }
+   .dropdown-menu>li>a{
+/*    		font-size: 20px;  */
+   		color: #9d9d9d;
+   		font-size:15px;
+   }
+   .dropdown-menu>li>a:hover{
+   		background-color:black;
+   		color: white;
+   }
+    .dropdown{ 
+    	margin-left:1px; 
+  
+   } 
+   #myCarousel{/* 耳��윭�� */
+      width: 75%;
+      height: 500px;
+      float: left;
+      
+   }
+   
+   .form-horizontal{/* 濡쒓렇�씤李� */
+      padding:10px;
+      padding-top:30px;
+      padding-bottom:20px;
+      width:23.5%;
+      height: 250px;
+      float: left;
+      
+      border: 0.1px black solid;
+      margin-left: 1.5%;
+      margin-top: 15px;
+      margin-bottom: 30px;
+      border-radius:15px; 
+      background-color: rgba(255,255,255,0.05);
+   }
+   
+   label{
+   	color:black;
+   }
+   
+   #loginBtn{
+   	margin-bottom: 10px;
+   }
+   
+   #reco{
+   	margin:0 460px;
+   }
+   #loginBannerImg{
+   	height:100px; 
+   	width:261px;
+   }
+   #userBtn{
+   	margin-left: 10px;
+   	margin-right: 10px;
+   }
+   .btnl{
+    border:none;
+   	background-color:black;
+   	color:white;
+   }
+   .btnl:hover{
+    border:none;
+   	background-color: gray;
+   }
+   .btnl:active{
+    border: none;
+	background-color: gray;
+   }
+   .carousel-inner>.item>a>img, .carousel-inner>.item>img{/* 罹먮윭�� 李⑥씠誘몄�  */
+		height:500px;
+		width: 100%;
+	}
+	#loginBanner{
+		margin: 4px 0px 1px 20px;
+		width:261px;
+		height: 100px;
+		float: left;
+	}
+	
+	.row{
+		width:250px;
+		float:left;
+		margin: 0 5px;
+	}
+	#recoImg{
+		width: 280px;
+	}
+	
+	#footer{
+		text-align: right;
+		margin-bottom:0px;
+		padding-bottom:10px;
+	}
+	#footerContent{
+		line-height:28px; 
+		padding:10px 0;
+		color: white;
+	}
+	b{
+		float: left;
+	}
+	#price{
+		float:right;
+	}
+	#detailBtn{
+		width:210px; 
+		margin-left: 5px;
+	}
+	
+	.title{
+		margin-top:40px;
+	}
+	
+	hr{
+		margin-top:10px;
+		border: 1px solid black;
+		width:1140px;
+	}
+	
+	#subMenu{
+/* 		margin-left:110px; */
+	}
+	#subMenu ul {
+		list-style-type:none;
+/* 		border-left: 2px solid black; */
+		padding-left:0px;
+	}
+	
+	#subMenu ul li {
+		display:inline;
+		border-left: none;
+		padding: 0px 10px 0px 10px;
+		margin: 5px 0px 5px 0px;
+		border-left: 1px solid black;
+	}
+	
+	#subMenu ul li:first-child {
+
+		border-left: none;
+
+	}
+	
+	#subMenu ul li a{
+		text-decoration: none;
+	}
+	
+	#subMenu ul li a:hover{
+		color:black;
+	}
+	
+	#subMenu ul li a:active{
+		color:black;
+	}
+	
+	#subMenuTitle{
+		margin-left:400px;
+	}
+	
+	#contentDiv{
+
+		margin-top:50px;
+		margin-left:130px;
+	}
+	
+	#eventCarTable{
+		width: 900px;
+		text-align: center;
+	}
+	
+	#eventCarTable tr{
+		border-bottom:0.1px solid gray;
+		font-size:14px;
+		height: 45px;
+	}
+	
+	#eventCarTable tbody tr th{
+		font-size:17px;
+		font-family: 怨좊뵓;
+	
+	}
+	
+	th{
+		text-align: center;
+	}
+	
+	#eventCarTable tbody tr td{
+		font-size:14px;
+		font-family: 怨좊뵓;
+	}
+	
+	#urlUp{
+		float: left;
+	}
+	#fileUp{
+		margin-left:40px;
+		float: left;
+	}
+	
+	#upload{
+		margin-top:20px;
+		border:1px solid black;
+		width:900px;
+		padding:5px;
+	}
+	
+	#content{
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+	
+	#carList{
+		text-align: center;
+	}
+	
+	.controlBtn{
+		margin:5px 10px 5px 10px;
+	}
+	
+	#saveBtn{
+		margin-top:30px;
+	}
+	
+	footer{
+		background-color: #000;
+	}

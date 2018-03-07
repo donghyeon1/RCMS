@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="donghyeon.rcms.reservation.dao.mapper.ReservationMapper">
+	
+	<select id="getCars" resultType="car" parameterType="int">
+		select car_num carNum, car_name carName, car_mileage carMileage, car_img_name carImgName, car_charge carCharge, color_name color, type_name type, maker_name maker, fuel_name fuel 
+		from cars 
+		natural join colors
+		NATURAL join types 
+		natural join makers 
+		natural join fuels
+		where type_code=#{typeCode}
+	</select>
+	
+	<select id="getCar" resultType="car" parameterType="int">
+		select car_num carNum, car_name carName, car_mileage carMileage, car_img_name carImgName, car_charge carCharge, color_name color, type_name type, maker_name maker, fuel_name fuel 
+		from cars 
+		natural join colors
+		NATURAL join types 
+		natural join makers 
+		natural join fuels
+		where car_num=#{carNum}
+	</select>
+	
+	<insert id="carReservation" parameterType="reservation">
+		insert into reservations values(reserv_seq.nextval,#{reservDate}, #{returnDate}, #{userId}, #{carNum})
+	</insert>
+	
+	<select id="reservationOverlapCheck" resultType="int" parameterType="reservation">
+	<![CDATA[ 
+ 		select count(*)
+ 		from reservations
+ 		where car_num = #{carNum}
+ 		and return_date >= #{reservDate}
+ 		and reserv_date <= #{returnDate}
+ 	]]>
+	</select>
+
+	<select id="getReservByCarNum" resultType="reservation" parameterType="int">
+	<![CDATA[ 
+		select reserv_num reservNum, reserv_date reservDate, return_date returnDate, user_id userId, car_num carNum
+		from reservations
+		where car_num = #{carNum}
+		order by reserv_num
+ 	]]>
+	</select>
+
+	<select id="getDisableDate" resultType="HashMap" parameterType="int">
+	<![CDATA[
+	select to_char(days, 'yyyy-mm-dd') as DAYS
+    from (
+    select start_day + level - 1 days
+        from (
+                select 
+                    reserv_date start_day,
+                    return_date end_day
+                    from reservations
+                    where reserv_num = #{reservNum}
+                )
+                connect by start_day  + level - 1 <= end_day
+        )
+     ]]>
+	</select>
+	
+   <select id="getCarInfo" resultType="car" parameterType="int">
+      select car_num carNum, car_name carName, car_mileage carMileage, car_img_name carImgName, car_charge carCharge, color_name color, type_name type, maker_name maker, fuel_name fuel 
+      from cars 
+      natural join colors
+      NATURAL join types 
+      natural join makers 
+      natural join fuels
+      where car_num=#{carNum}
+   </select>
+   
+	<update id="carReservationModify" parameterType="reservation">
+	update reservations set reserv_date=#{reservDate}, return_date=#{returnDate} 
+	where reserv_num=#{reservNum}
+	</update>
+	
+	<delete id="carReservationDelete" parameterType="int">
+	delete reservations where reserv_num = #{reservNum}
+	</delete>
+	
+	<select id="getReservationSearchList" parameterType="reservation" resultType="reservation">
+	select reserv_num reservNum, reserv_date reservDate, return_date returnDate, user_id userId, car_num carNum, car_name carName
+		from reservations
+		natural join cars
+		where 1=1
+		<if test="reservNum gt 0">
+			and reserv_num = #{reservNum,jdbcType=NUMERIC}
+		</if>
+		<if test="userId !='null'">
+			and user_id like '%'||#{userId,jdbcType=VARCHAR}||'%'	
+		</if>
+		<if test="carNum gt 0">
+			and car_num = #{carNum,jdbcType=NUMERIC}
+		</if>
+		<if test="carName !='null'">
+			and car_name like '%'||#{carName,jdbcType=VARCHAR}||'%'
+		</if>
+		<if test="reservDate != null">
+			 <![CDATA[and reserv_date >= #{reservDate,jdbcType=DATE} AND return_date < #{returnDate,jdbcType=DATE}]]>
+        </if>
+        order by reserv_num
+	</select>
+</mapper>

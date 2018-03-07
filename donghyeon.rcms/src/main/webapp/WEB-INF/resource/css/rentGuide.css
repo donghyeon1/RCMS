@@ -1,0 +1,199 @@
+
+@CHARSET "UTF-8";
+  
+    body {
+        background:url(../img/citypic2.jpg) no-repeat; 
+        background-size:100% 690px;  
+        margin-bottom: 0px;
+    } 
+    
+   #logoText{
+      text-align: center;
+   }
+   .container{/* 전체 컨테이너 */
+      margin-bottom: 50px;
+      margin-top: 10px;
+   }
+   
+   #topLogin{
+         border:1px solid #fff;
+         border-radius:5px;
+         padding: 5px;
+           float:right;
+           text-decoration: none;
+           color:lightgray;
+       margin-right:10px; 
+   }
+   
+   .dropdown:hover .dropdown-menu {/* 드롭다운 색 */
+       display: block;
+       margin-top: 0;
+       background-color: #000;
+       margin-left: 80px;
+   }
+   #logo{
+      font-size: 60px; color: #000;text-decoration: none;
+   }
+   .nav>li{/* 메뉴빠  */
+      width:250px;
+      height: 20px;
+      text-align:center;
+   }
+    .dropdown:hover{
+         height:48px;
+   }
+   
+   #ul1{
+         width: 190px;
+   }
+   #ul2{
+         width: 260px;
+   }
+   #ul4{
+         width: 180px;
+   }
+   .dropdown-menu>li{
+      float: left;
+   }
+   .dropdown-menu>li>a{
+/*          font-size: 20px;  */
+         color: #9d9d9d;
+         font-size:15px;
+   }
+   .dropdown-menu>li>a:hover{
+         background-color:black;
+         color: white;
+   }
+    .dropdown{ 
+       margin-left:1px; 
+    }
+  
+      #subMenu{
+/*       margin-left:110px; */
+   }
+   #subMenu ul {
+      list-style-type:none;
+/*       border-left: 2px solid black; */
+      padding-left:0px;
+   }
+   
+   #subMenu ul li {
+      display:inline;
+      border-left: none;
+      padding: 0px 10px 0px 10px;
+      margin: 5px 0px 5px 0px;
+      border-left: 1px solid black;
+   }
+   
+   #subMenu ul li:first-child {
+
+      border-left: none;
+
+   }
+   
+   #subMenu ul li a{
+      text-decoration: none;
+   }
+   
+   #subMenu ul li a:hover{
+      color:black;
+   }
+   
+   #subMenu ul li a:active{
+      color:black;
+   }
+   
+   #subMenuTitle{
+      margin-left:400px;
+   } 
+
+   #footer{
+      text-align: right;
+      margin-bottom:0px;
+      padding-bottom:10px;
+   }
+   #footerContent{
+      line-height:28px; 
+      padding:10px 0;
+      color: white;
+   }
+   b{
+      float: left;
+   }
+   #price{
+      float:right;
+   }
+   #detailBtn{
+      width:210px; 
+      margin-left: 5px;
+   }
+   
+   footer{
+      background-color: #000;
+      
+   }
+   
+#note{
+      
+      color:gray;
+      border-color: black;
+   border-style: solid;/*실선*/
+   padding: 10px;
+   border-top-width: 5px;/*선굵기 윗부분만*/
+   border-right-width: 0;
+   border-bottom-width:5px;
+   border-left-width: 0;
+   
+}
+ .content {
+   float: left;
+   color: black;
+}
+aside {
+   float:  right;
+}
+#footer{
+      text-align: right;
+      margin-bottom:0px;
+      padding-bottom:10px;
+}
+#footerContent{
+      line-height:28px; 
+      padding:10px 0;
+      color: white;
+}
+
+#infoTable{
+      width:900px;   
+      margin-top:20px;
+      text-align: center;
+      border:1px solid white;
+}
+
+#infoTable td{
+      background-color: #D8D8D8;
+      height: 200px;
+      border:1px solid white;
+      width:70px;
+}
+
+#infoTable thead{
+      background-color: #424242;
+      text-align: center;
+      height: 13px;
+}
+
+#infoTable thead th{
+      text-align: center;
+      border:1px solid white;
+      height: 50px;
+      color: white;
+}
+footer{
+      background-color: #000;
+}
+.row{
+      width:400px;
+      float:right;
+      margin: 0 5px;
+   }
